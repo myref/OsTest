@@ -4,7 +4,7 @@ Library           SeleniumLibrary
 Library           OperatingSystem
 Documentation     Smoketesting someApp.
 
-Suite Setup       Open Browser   ${WEBSITE URL}      chrome       remote_url=http://seleniumgchost.internal.provider.test:4444    options=add_argument("--ignore-certificate-errors")
+Suite Setup       Open Browser   ${WEBSITE URL}      chrome       remote_url=http://seleniumgchost.internal.%{DOMAIN_NAME_SL}.%{DOMAIN_NAME_TL}:4444    options=add_argument("--ignore-certificate-errors")
 Suite Teardown    Close Browser
 
 *** Test cases ***
@@ -13,7 +13,7 @@ Validate smoke
 
 *** Variables ***
 ${DELAY}            0
-${WEBSITE URL}      https://gitea.tooling.provider.test:3000/
+${WEBSITE URL}      https://gitea.tooling.%{DOMAIN_NAME_SL}.%{DOMAIN_NAME_TL}:3000/
 
 *** Keywords ***
 
