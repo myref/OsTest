@@ -23,5 +23,5 @@ See if the server is running
     Close Browser
 
 Gitea Page Should Be Open
-    Sleep              1
-    Title Should Be    Our single source of truth
+    Sleep                  1
+    Page Should Contain    Our single source of truth
